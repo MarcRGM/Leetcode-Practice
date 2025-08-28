@@ -11,3 +11,4 @@ class Solution(object):
     
 # instead of creating the set in one go, 
 # we can return immediately if the element is in the set as we go through adding each one.
+# example: return len(set(nums)) != len(nums)
