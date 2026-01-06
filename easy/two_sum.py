@@ -9,8 +9,7 @@ class Solution(object):
 
         indices_of_sum = {}
 
-        for i, num in nums:
+        for i, num in enumerate(nums):
             if target - num in indices_of_sum:
                 return [indices_of_sum[target - num], i]
-        
-        indices_of_sum = i
+            indices_of_sum = i
