@@ -12,4 +12,4 @@ class Solution(object):
         for i, num in enumerate(nums):
             if target - num in indices_of_sum:
                 return [indices_of_sum[target - num], i]
-            indices_of_sum = i
+            indices_of_sum[num] = i
