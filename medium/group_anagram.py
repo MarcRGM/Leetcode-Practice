@@ -34,13 +34,17 @@ from collections import defaultdict
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         res = defaultdict(list)
+        # create a dictionary with default keys as []
 
         for s in strs:
             count = [0] * 26 # a ... z
+            # [0, 0, ..., 0]
 
             for c in s:
                 count[ord(c) - ord('a')] += 1
+                # add 1s on the index of existing letters
 
             res[tuple(count)].append(s)
+            # add the str on the same keys while creating a new one if the key doesn't exist
 
         return res.values()
