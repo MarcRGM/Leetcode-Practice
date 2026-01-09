@@ -47,4 +47,4 @@ class Solution:
             res[tuple(count)].append(s)
             # add the str on the same keys while creating a new one if the key doesn't exist
 
-        return res.values()
+        return list(res.values())
