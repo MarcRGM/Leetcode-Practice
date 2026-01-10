@@ -25,3 +25,14 @@ class Solution(object):
 
 # one liner answers: collections.Counter(s) == collections.Counter(t) AND sorted(s) == sorted(t)
 # collections.Counter() is like a dictionary that counts how many times each element appears in a sequence
+
+# Works only for small case letters
+        order = defaultdict(list)
+
+        countS, countT = [0] * 26, [0] * 26
+        
+        for ls, lt in zip(s,t):
+            countS[ord(ls) - ord('a')] += 1
+            countT[ord(lt) - ord('a')] += 1
+        
+        return countS == countT
